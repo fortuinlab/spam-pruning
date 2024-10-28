@@ -1,0 +1,33 @@
+{
+    "seed": 42,
+    "dataset_name": "Cifar10",
+    "model_name": "WideResNet",
+    "lr": 0.1,
+    "weight_decay": 0.0,
+    "batch_size": 128,
+    "num_epochs": 100,
+    "use_map": false,
+    "train_marglik": true,
+    "optimizer": "sgd",
+    "criterion": "cross_entropy",
+    "hessian_structure": "full",
+    "device": "cuda",
+    "sparse_method": null,
+    "laplace": {
+        "laplace_type": "KronLaplace",
+        "prior_structure": "unitwise",
+        "temperature": 5,
+        "lr": 0.1,
+        "lr_hyp": 0.1,
+        "lr_min": 1e-06,
+        "marglik_frequency": 5,
+        "n_hypersteps": 100,
+        "n_epochs_burnin": 20
+    },
+    "wandb": {
+        "project": "BNN_Sparse",
+        "entity": "xxxxxx"
+    },
+    "resnet_inplanes": 64,
+    "decay": "cos"
+}

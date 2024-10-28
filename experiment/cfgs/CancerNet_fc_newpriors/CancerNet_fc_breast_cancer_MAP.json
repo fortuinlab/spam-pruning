@@ -1,0 +1,30 @@
+{
+    "seed": 42,
+    "dataset_name": "breast_cancer",
+    "model_name": "CancerNet_fc",
+    "lr": 0.001,
+    "weight_decay": 0.0,
+    "batch_size": 64,
+    "num_epochs": 50,
+    "use_map": true,
+    "train_marglik": true,
+    "optimizer": "adam",
+    "criterion": "cross_entropy",
+    "hessian_structure": "full",
+    "device": "cuda",
+    "sparse_method": null,
+    "laplace": {
+        "laplace_type": "DiagLaplace",
+        "prior_structure": "scalar",
+        "lr_min": null,
+        "marglik_frequency": 1,
+        "n_hypersteps": 100,
+        "lr": 0.001,
+        "n_epochs_burnin": 51
+    },
+    "wandb": {
+        "project": "BNN_Sparse",
+        "entity": "xxxxxx"
+    },
+    "epochs": 50
+}
